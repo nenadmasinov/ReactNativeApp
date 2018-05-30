@@ -1,20 +1,14 @@
 import React from 'react';
-import { StyleSheet, StatusBar, Image, View } from 'react-native';
+import { StyleSheet, Image, View, Text } from 'react-native';
 
-export default class Splash extends React.Component {
+export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar hidden={true} />
+        <Text>Login Page</Text>
         <Image source={require('../img/wasp.png')} />
       </View>
     );
-  }
-
-  componentDidMount(){
-      setTimeout(function () {
-        this.props.navigation.navigate('Login');
-      }, 3000);
   }
 }
 
