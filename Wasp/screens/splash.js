@@ -1,20 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Splash from './screens/splash'
+import { StyleSheet, StatusBar, Image, View } from 'react-native';
 
-export default class App extends React.Component {
+export default class Splash extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Splash />
+        <StatusBar hidden={true} />
+        <Image source={require('../img/wasp.png')} />
       </View>
     );
-  }
-
-  componentDidMount(){
-      setTimeout(function () {
-        alert('test');
-      }, 1500);
   }
 }
 
