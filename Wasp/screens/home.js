@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Image, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default class Splash extends React.Component {
+export default class Home extends React.Component {
   constructor(props) {
      super(props);
   }
@@ -9,8 +9,7 @@ export default class Splash extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image source={require('../img/splash.png')}
-               style={styles.splashImage}/>
+        <Text>Home Page</Text>
       </View>
     );
   }

@@ -4,10 +4,16 @@ import Login from '../screens/login'
 
 const RootNavigator = createStackNavigator({
     Splash: {
-      screen: Splash
+      screen: Splash,
+      navigationOptions: {
+        header: null
+      }
     },
     Login: {
-      screen: Login
+      screen: Login,
+      navigationOptions: {
+        headerTitle: "Login"
+      }
     }
   },
     {
