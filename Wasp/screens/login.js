@@ -95,7 +95,7 @@ export default class Login extends React.Component {
         password: this.state.password
       }
       await AsyncStorage.setItem('user', JSON.stringify(user));
-      
+      this.props.userLoggedIn(true);
     } catch (error) {
       Alert.alert('Error',
                   error,

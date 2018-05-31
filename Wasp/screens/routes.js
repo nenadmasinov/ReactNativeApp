@@ -1,23 +1,13 @@
-import { createStackNavigator } from 'react-navigation';
-import Splash from '../screens/splash'
-import Login from '../screens/login'
+import { createDrawerNavigator } from 'react-navigation';
+import Home from '../screens/home'
+import News from '../screens/news'
 
-const RootNavigator = createStackNavigator({
-    Splash: {
-      screen: Splash,
-      navigationOptions: {
-        header: null
-      }
-    },
-    Login: {
-      screen: Login,
-      navigationOptions: {
-        headerTitle: "Login"
-      }
-    }
+const RootNavigator = createDrawerNavigator({
+    Home: { screen: Home },
+    News: { screen: News }
   },
     {
-    initialRouteName: 'Splash'
+      initialRouteName: 'Home'
   });
 
 export default RootNavigator;
