@@ -1,32 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, Button, Image } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
+import { Container, Header, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
 
 export default class Home extends React.Component {
-  static navigationOptions = {
-      drawerLabel: 'Home',
-      drawerIcon: ({ tintColor }) => (
-        <Image
-          source={require('../img/home.png')}
-          style={[styles.icon, {tintColor: tintColor}]}
-        />
-      ),
-    };
-
-  constructor(props) {
-     super(props);
-  }
-
   render() {
     return (
-      <View style={styles.container}>
-        <StatusBar backgroundColor="green"
-                   barStyle="dark-content"
-                   translucent={true}
-                   hidden={false} />
-        <Text>Home Page</Text>
-        <Button title="toggle view"
-                onPress={() => { this.props.navigation.toggleDrawer() }} />
-      </View>
+        <Container>
+            <Header>
+              <Left>
+                <Button transparent>
+                  <Icon name='menu' onPress={() => { this.props.navigation.openDrawer() }} />
+                </Button>
+              </Left>
+              <Body>
+                <Text>Header</Text>
+              </Body>
+              <Right />
+          </Header>
+          <Content padder>
+            <Text>Home Page</Text>
+          </Content>
+        </Container>
     );
   }
 }
@@ -34,6 +28,7 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop:20,
     backgroundColor: '#fff'
   },
   icon: {

@@ -2,20 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default class News extends React.Component {
-  static navigationOptions = {
-      drawerLabel: 'News',
-      drawerIcon: ({ tintColor }) => (
-        <Image
-          source={require('../img/news.png')}
-          style={[styles.icon, {tintColor: tintColor}]}
-        />
-      ),
-    };
-
-  constructor(props) {
-     super(props);
-  }
-
   render() {
     return (
       <View style={styles.container}>
