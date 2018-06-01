@@ -10,6 +10,9 @@
     },
     "android": {
       "package": "com.masinov.WaspApp"
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#000000"
     }
   }
 }

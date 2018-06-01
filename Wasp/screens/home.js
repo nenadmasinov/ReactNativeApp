@@ -1,19 +1,19 @@
 import React from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, Platform } from 'react-native';
 import { Container, Header, Title, Content, Button, Left, Right, Body, Icon, Text } from 'native-base';
 
 export default class Home extends React.Component {
   render() {
     return (
-        <Container>
-            <Header>
+        <Container style={{paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight}}>
+            <Header style={styles.header}>
               <Left>
                 <Button transparent>
-                  <Icon name='menu' onPress={() => { this.props.navigation.openDrawer() }} />
+                  <Icon name='menu' style={styles.icon} onPress={() => { this.props.navigation.openDrawer() }} />
                 </Button>
               </Left>
               <Body>
-                <Text>Header</Text>
+                <Text style={styles.headerTitle}>Home</Text>
               </Body>
               <Right />
           </Header>
@@ -31,8 +31,13 @@ const styles = StyleSheet.create({
     marginTop:20,
     backgroundColor: '#fff'
   },
-  icon: {
-    width: 24,
-    height: 24
+  header:{
+    backgroundColor: "#33d9b2"
+  },
+  headerTitle: {
+    color: "#fff"
+  },
+  icon:{
+    color: "#fff"
   }
 });
